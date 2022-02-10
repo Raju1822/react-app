@@ -15,7 +15,7 @@ import UpdateEmployeeDetails from './components/Admin/UpdateEmployeeDetails';
 import AuthorityLogin from './components/Authority/AuthorityLogin';
 import AuthorityDashboard from './components/Authority/AuthorityDashboard';
 import AppraisalReport from './components/Employee/AppraisalReport';
-
+import Contact from './components/Contact';
 
 
 
@@ -46,6 +46,8 @@ function App() {
            <Route path = "/appraisal-report" element = {< AppraisalReport/>}></Route>
 
            <Route path = "/update-details" element = {< UpdateEmployeeDetails/>}></Route>
+
+           <Route path = "/contact" element = {< Contact/>}></Route>
 
            <Route path = "/hi" element = {< Sidebar/>}></Route>
         </Routes>

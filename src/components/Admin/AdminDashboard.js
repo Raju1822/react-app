@@ -216,9 +216,9 @@ class AdminDashboard extends Component {
                       aria-controls="v-pills-messages"
                       aria-selected="false"
                     >
-                      <i className="fa fa-star mr-2"></i>
+                      <i className="fa fa-money mr-2"></i>
                       <span className="font-weight-bold small text-uppercase">
-                        Reviews
+                        Salary Table
                       </span>
                     </a>
 
@@ -335,18 +335,37 @@ class AdminDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <h4 className="font-italic mb-4">Reviews</h4>
-                      <p className="font-italic text-muted mb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                      </p>
+                      <h4 className="font-italic mb-4">Employees Salary</h4>
+
+                      <table className="table table-striped table-bordered">
+                          <thead>
+                            <tr>
+                              <th> Employee Id</th>
+                              <th> Employee First Name</th>
+                              <th>Salary</th>
+                              <th>Action</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                <td>id</td>
+                                <td> Name here</td>
+                                <td>Salary</td>
+                                <td>
+                                  <button
+                                    style={{ marginLeft: "10px" }}
+
+                                    className="btn btn-info"
+                                  >
+                                    Edit
+                                  </button>
+                                </td>
+                              </tr>
+
+                          </tbody>
+                        </table>
+
                     </div>
 
                     <div
