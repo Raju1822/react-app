@@ -14,6 +14,7 @@ import EmployeeDashboard from './components/Employee/EmployeeDashboard';
 import UpdateEmployeeDetails from './components/Admin/UpdateEmployeeDetails';
 import AuthorityLogin from './components/Authority/AuthorityLogin';
 import AuthorityDashboard from './components/Authority/AuthorityDashboard';
+import AppraisalReport from './components/Employee/AppraisalReport';
 
 
 
@@ -29,13 +30,23 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" exact element={<Home />} />
+
           <Route path = "/home" element = {< Home />}></Route>
+
            <Route path = "/admin" element = {< AdminDashboard />}></Route>
+
            <Route path = "/employee-login" element = {< EmployeeLogin />}></Route>
+
            <Route path = "/authority-login" element = {< AuthorityLogin/>}></Route>
+
            <Route path = "/auth-home" element = {<AuthorityDashboard/>}></Route>
+
            <Route path = "/employee-home" element = {< EmployeeDashboard />}></Route>
+
+           <Route path = "/appraisal-report" element = {< AppraisalReport/>}></Route>
+
            <Route path = "/update-details" element = {< UpdateEmployeeDetails/>}></Route>
+
            <Route path = "/hi" element = {< Sidebar/>}></Route>
         </Routes>
         </div>

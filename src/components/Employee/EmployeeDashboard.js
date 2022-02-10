@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import profile from "../../img/avatar.png";
 
 
+
+
+
 class EmployeeDashboard extends Component {
   constructor(props) {
     super(props);
@@ -11,12 +14,13 @@ class EmployeeDashboard extends Component {
 
     };
 
+
   }
 
+// AppraisalForm() {
 
-AppraisalForm() {
-  alert("Hi..");
-}
+//   // alert("Hi..");
+// }
 
 
 
@@ -154,19 +158,36 @@ AppraisalForm() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <h4 class="font-italic mb-4">Appraisal Report <button type="button" className="btn btn-success mx-5" onClick={this.AppraisalForm}>Create Appraisal</button></h4>
+                      <h4 class="font-italic mb-4">Appraisal Report <a href="/appraisal-report" className="btn btn-success mx-5">Create Appraisal</a></h4>
 
                       <hr></hr>
-                      <p class="font-italic text-muted mb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                      <p class="font-italic text-muted mb-2 text-center">
+                        <table className="table table-striped table-bordered">
+                          <thead>
+                            <tr>
+                              <th> Employee Id</th>
+                              <th> Employee First Name</th>
+                              <th>Action</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                <td>id</td>
+                                <td> Name here</td>
+                                <td>
+                                  <button
+                                    style={{ marginLeft: "10px" }}
+
+                                    className="btn btn-info"
+                                  >
+                                    View
+                                  </button>
+                                </td>
+                              </tr>
+
+                          </tbody>
+                        </table>
                       </p>
                     </div>
 
