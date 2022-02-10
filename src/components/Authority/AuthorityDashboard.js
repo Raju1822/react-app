@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import profile from "../../img/avatar.png";
 
 
-class EmployeeDashboard extends Component {
+class AuthorityDashboard extends Component {
   constructor(props) {
     super(props);
 
@@ -14,9 +14,7 @@ class EmployeeDashboard extends Component {
   }
 
 
-AppraisalForm() {
-  alert("Hi..");
-}
+
 
 
 
@@ -34,7 +32,7 @@ AppraisalForm() {
                 <img src={profile} alt="profile-pic" width="15%"/>
               </h1>
               <p className="lead ">
-                Employee Name Here
+                Authority Name Here
               </p>
               <p>
                 <button type="button" className="btn btn-primary m-2">
@@ -90,7 +88,7 @@ AppraisalForm() {
                     >
                       <i class="fa fa-calendar-minus-o mr-2"></i>
                       <span class="font-weight-bold small text-uppercase">
-                        Appraisal Report
+                        Bookings
                       </span>
                     </a>
 
@@ -154,9 +152,7 @@ AppraisalForm() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <h4 class="font-italic mb-4">Appraisal Report <button type="button" className="btn btn-success mx-5" onClick={this.AppraisalForm}>Create Appraisal</button></h4>
-
-                      <hr></hr>
+                      <h4 class="font-italic mb-4">Bookings</h4>
                       <p class="font-italic text-muted mb-2">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labore et
@@ -213,4 +209,4 @@ AppraisalForm() {
   }
 }
 
-export default EmployeeDashboard;
+export default AuthorityDashboard;

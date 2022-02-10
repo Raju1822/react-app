@@ -51,7 +51,7 @@ class Header extends Component {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Dropdown link
+                  Logins
                 </a>
                 <div
                   className="dropdown-menu"

@@ -12,6 +12,8 @@ import AdminDashboard from './components/Admin/AdminDashboard';
 import EmployeeLogin from './components/Employee/EmployeeLogin';
 import EmployeeDashboard from './components/Employee/EmployeeDashboard';
 import UpdateEmployeeDetails from './components/Admin/UpdateEmployeeDetails';
+import AuthorityLogin from './components/Authority/AuthorityLogin';
+import AuthorityDashboard from './components/Authority/AuthorityDashboard';
 
 
 
@@ -30,6 +32,8 @@ function App() {
           <Route path = "/home" element = {< Home />}></Route>
            <Route path = "/admin" element = {< AdminDashboard />}></Route>
            <Route path = "/employee-login" element = {< EmployeeLogin />}></Route>
+           <Route path = "/authority-login" element = {< AuthorityLogin/>}></Route>
+           <Route path = "/auth-home" element = {<AuthorityDashboard/>}></Route>
            <Route path = "/employee-home" element = {< EmployeeDashboard />}></Route>
            <Route path = "/update-details" element = {< UpdateEmployeeDetails/>}></Route>
            <Route path = "/hi" element = {< Sidebar/>}></Route>
