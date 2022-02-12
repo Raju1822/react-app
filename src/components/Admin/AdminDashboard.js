@@ -4,24 +4,19 @@ import "../../css/AdminDashboard.css";
 import Admin from "../../img/admin.png";
 import StaffService from "../../services/StaffService";
 
-
 class AdminDashboard extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       admin: [],
-      staff: []
-    }
-
+      staff: [],
+    };
   }
 
-
-  addEmployee(){
-   alert("Employee add feature comming soon........!");
-}
-
-
+  addEmployee() {
+    alert("Employee add feature comming soon........!");
+  }
 
   componentDidMount() {
     AdminService.getAdmin().then((res) => {
@@ -32,8 +27,6 @@ class AdminDashboard extends Component {
       this.setState({ staff: res.data });
     });
   }
-
-
 
   render() {
     return (
@@ -74,7 +67,7 @@ class AdminDashboard extends Component {
                 <div className="modal-content">
                   <div className="modal-body">
                     <h1 className="text-center">
-                      <img src={Admin} alt="profile-pic"/>
+                      <img src={Admin} alt="profile-pic" />
                     </h1>
                     <h4 className="modal-title text-center">Admin</h4>
                   </div>
@@ -104,7 +97,6 @@ class AdminDashboard extends Component {
           <div className="album py-5 bg-light">
             <div className="container">
               <div className="row">
-
                 <div className="col-md-3">
                   <div className="card mb-4 box-shadow text-center">
                     <div className="m-3">
@@ -160,7 +152,6 @@ class AdminDashboard extends Component {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -267,8 +258,16 @@ class AdminDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-
-                      <h4 className="font-italic mb-4">Employee Table <button type="button" className="btn btn-success mx-5" onClick={this.addEmployee}>Add Employee</button></h4>
+                      <h4 className="font-italic mb-4">
+                        Employee Table{" "}
+                        <button
+                          type="button"
+                          className="btn btn-success mx-5"
+                          onClick={this.addEmployee}
+                        >
+                          Add Employee
+                        </button>
+                      </h4>
                       <hr></hr>
                       <div className="font-italic text-muted mb-2">
                         <table className="table table-striped table-bordered">
@@ -338,34 +337,33 @@ class AdminDashboard extends Component {
                       <h4 className="font-italic mb-4">Employees Salary</h4>
 
                       <table className="table table-striped table-bordered">
-                          <thead>
-                            <tr>
-                              <th> Employee Id</th>
-                              <th> Employee First Name</th>
-                              <th>Salary</th>
-                              <th>Action</th>
-
-                            </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                <td>id</td>
-                                <td> Name here</td>
-                                <td>Salary</td>
-                                <td>
-                                  <button
-                                    style={{ marginLeft: "10px" }}
-
-                                    className="btn btn-info"
-                                  >
-                                    Edit
-                                  </button>
-                                </td>
-                              </tr>
-
-                          </tbody>
-                        </table>
-
+                        <thead>
+                          <tr>
+                            <th> Employee Id</th>
+                            <th> Employee First Name</th>
+                            <th>Salary</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>id</td>
+                            <td> Name here</td>
+                            <td>Salary</td>
+                            <td>
+                              <a href="/salaryedit">
+                                {" "}
+                                <button
+                                  style={{ marginLeft: "10px" }}
+                                  className="btn btn-info"
+                                >
+                                  Edit{" "}
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
 
                     <div
@@ -374,7 +372,6 @@ class AdminDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-
                       <h4 className="font-italic mb-4">Others</h4>
                       <p className="font-italic text-muted mb-2">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -387,12 +384,6 @@ class AdminDashboard extends Component {
                         non proident, sunt in culpa qui officia deserunt mollit
                         anim id est laborum.
                       </p>
-
-
-
-
-
-
                     </div>
                   </div>
                 </div>

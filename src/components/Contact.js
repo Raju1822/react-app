@@ -23,7 +23,7 @@ class Contact extends Component {
                     <tr className='text-success'>
                         <th>Mobile Number</th>
                         <th>Email Id</th>
-                        <th>Address</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -33,7 +33,7 @@ class Contact extends Component {
                         <td>naimish
                             sahu
                             08@gmail.com</td>
-                        <td>Great Eastern Rd, Amanaka, Raipur, Chhattisgarh 492010</td>
+
                         </tr>
                     </tbody>
                 </table>
@@ -45,7 +45,7 @@ class Contact extends Component {
                     <tr className='text-success'>
                         <th>Mobile Number</th>
                         <th>Email Id</th>
-                        <th>Address</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -53,7 +53,7 @@ class Contact extends Component {
                         <td>XXXX-XXXX</td>
                         <td>abc
                             @gmail.com</td>
-                        <td>Great Eastern Rd, Amanaka, Raipur, Chhattisgarh 492010</td>
+
                         </tr>
                     </tbody>
                 </table>

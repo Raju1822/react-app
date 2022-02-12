@@ -16,6 +16,8 @@ import AuthorityLogin from './components/Authority/AuthorityLogin';
 import AuthorityDashboard from './components/Authority/AuthorityDashboard';
 import AppraisalReport from './components/Employee/AppraisalReport';
 import Contact from './components/Contact';
+import SalaryEdit from './components/Admin/SalaryEdit';
+import PreviewReport from './components/Authority/PreviewReport';
 
 
 
@@ -41,11 +43,15 @@ function App() {
 
            <Route path = "/auth-home" element = {<AuthorityDashboard/>}></Route>
 
+           <Route path = "/preview" element = {< PreviewReport/>}></Route>
+
            <Route path = "/employee-home" element = {< EmployeeDashboard />}></Route>
 
            <Route path = "/appraisal-report" element = {< AppraisalReport/>}></Route>
 
            <Route path = "/update-details" element = {< UpdateEmployeeDetails/>}></Route>
+
+           <Route path = "/salaryedit" element = {< SalaryEdit/>}></Route>
 
            <Route path = "/contact" element = {< Contact/>}></Route>
 

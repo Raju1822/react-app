@@ -12,10 +12,11 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <header className=" ">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <header className="">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary p-3">
           <a className="navbar-brand" href="/">
-          <img src={NIT_Raipur} alt="page-icon"></img>
+          {/* <img src={NIT_Raipur} alt="page-icon"></img> */}
+          NIT Raipur
           </a>
           <button
             className="navbar-toggler"
@@ -32,17 +33,17 @@ class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/"> <i class="fa fa-home mr-2"></i>
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Features
+                <a className="nav-link" href="/"><i class="fa fa-search mr-2"></i>
+                  Search
                 </a>
               </li>
 
-              <li className="nav-item dropdown ">
+              <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="/"
@@ -51,10 +52,11 @@ class Header extends Component {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
+                  <i class="fa fa-user mr-2"></i>
                   Logins
                 </a>
                 <div
-                  className="dropdown-menu"
+                  className="dropdown-menu p-2 my-2"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <a className="dropdown-item" href="/authority-login">
@@ -69,12 +71,12 @@ class Header extends Component {
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Pricing
+                <a className="nav-link" href="/"><i className="fa fa-file mr-2" />
+                  Features
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">
+                <a className="nav-link" href="/contact">  <i class="fa fa-phone mr-2"></i>
                   Contact
                 </a>
               </li>

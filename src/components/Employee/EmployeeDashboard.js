@@ -109,7 +109,7 @@ class EmployeeDashboard extends Component {
                     >
                       <i class="fa fa-star mr-2"></i>
                       <span class="font-weight-bold small text-uppercase">
-                        Reviews
+                        Information
                       </span>
                     </a>
 
@@ -122,9 +122,9 @@ class EmployeeDashboard extends Component {
                       aria-controls="v-pills-settings"
                       aria-selected="false"
                     >
-                      <i class="fa fa-users mr-2"></i>
+                      <i class="fa fa-envelope mr-2"></i>
                       <span class="font-weight-bold small text-uppercase">
-                        Employees
+                        Messages
                       </span>
                     </a>
                   </div>
@@ -138,8 +138,8 @@ class EmployeeDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <h4 class="font-italic mb-4">Personal information</h4>
-                      <p class="font-italic text-muted mb-2">
+                      <h4 class=" mb-4">Personal information</h4>
+                      <p class="text-muted mb-2">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -158,11 +158,11 @@ class EmployeeDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <h4 class="font-italic mb-4">Appraisal Report <a href="/appraisal-report" className="btn btn-success mx-5">Create Appraisal</a></h4>
+                      <h4 class=" mb-4">Appraisal Report <a href="/appraisal-report" className="btn btn-success mx-5">Create Appraisal</a></h4>
 
-                      <hr></hr>
-                      <p class="font-italic text-muted mb-2 text-center">
-                        <table className="table table-striped table-bordered">
+
+                      <p class=" text-muted mb-2 text-center">
+                        <table className="table table-bordered">
                           <thead>
                             <tr>
                               <th> Employee Id</th>
@@ -197,18 +197,63 @@ class EmployeeDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <h4 class="font-italic mb-4">Reviews</h4>
-                      <p class="font-italic text-muted mb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                      </p>
+                      <h4 class=" mb-4 text-center">Department : department of employee</h4>
+
+
+
+
+
+                    <h5 className="text-center">Year:2022-23</h5>
+                    <p className="text-center">Time Table</p>
+                    <table class="table table-bordered no-more-tables text-center" >
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Subject</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>10:00 - 11:00</td>
+                                <td>sub1</td>
+                                <td>1st year</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>11:30 - 12:30</td>
+                                <td >sub2</td>
+                                <td>2nd year</td>
+
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>02:00 - 03:00</td>
+                                <td>Sub3</td>
+                                <td>3rd year</td>
+
+                            </tr>
+                            <tr>
+                                <td >Thursday</td>
+                                <td >10:30 - 11:30</td>
+                                <td >Sub4</td>
+                                <td >4th year</td>
+
+                            </tr>
+                            <tr>
+                                <td >Friday</td>
+                                <td >10:00 - 12:00</td>
+                                <td >Extra class</td>
+                                <td>Any</td>
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+
                     </div>
 
                     <div
@@ -217,7 +262,7 @@ class EmployeeDashboard extends Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <h4 class="font-italic mb-4">Employee Table</h4>
+                      <h4 class="font-italic mb-4">Messages</h4>
                       <p class="font-italic text-muted mb-2">
                        Hi
                       </p>

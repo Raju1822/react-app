@@ -2,3 +2,13 @@
   width: 20%;
 
 }
+
+.nav-item, .dropdown-item {
+font-size: 110%;
+
+}
+.nav-item>a:hover{
+  background-color: white;
+  color:black !important;
+}
+
