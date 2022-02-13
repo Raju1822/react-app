@@ -54,12 +54,13 @@ class AddEmployee extends Component {
             <h2>Add New Employee</h2>
           </div>
           <div className="p-5">
-            <form method="post">
+            <form onSubmit={this.SubmitForm} method="post">
               <div className="form-group">
                 <label> First Name: </label>
                 <input
                   placeholder="First Name"
                   name="firstName"
+                  required
                   className="form-control"
                   value={this.state.firstName}
                   onChange={this.changeFirstNameHandler}
@@ -71,6 +72,7 @@ class AddEmployee extends Component {
                   placeholder="Last Name"
                   name="lastName"
                   className="form-control"
+                  required
                   value={this.state.lastName}
                   onChange={this.changeLastNameHandler}
                 />
@@ -78,9 +80,11 @@ class AddEmployee extends Component {
               <div className="form-group">
                 <label> Email Id: </label>
                 <input
-                  placeholder="Email Address"
+                type="email"
+                  placeholder="name@example.com"
                   name="emailId"
                   className="form-control"
+                  required
                   value={this.state.emailId}
                   onChange={this.changeEmailHandler}
                 />
@@ -91,6 +95,7 @@ class AddEmployee extends Component {
                   placeholder="password"
                   name="password"
                   className="form-control"
+                  required
                   value={this.state.password}
                   onChange={this.changePasswordHandler}
                 />
@@ -101,15 +106,16 @@ class AddEmployee extends Component {
                   placeholder="password"
                   name="salary"
                   className="form-control"
+                  required
                   value={this.state.salary}
                   onChange={this.changeSalaryHandler}
                 />
               </div>
-              <button className="btn btn-primary m-2" onClick={this.SubmitForm}>
+              <button className="btn btn-primary m-2">
                 Submit
               </button>
-              <a href="//" className="btn btn-success mx-4">
-                Cancel
+              <a href="/admin" className="btn btn-success mx-4">
+                Back
               </a>
             </form>
           </div>
