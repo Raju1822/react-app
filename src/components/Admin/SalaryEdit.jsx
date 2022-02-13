@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { browserHistory } from "react-router";
 
 class SalaryEdit extends Component {
   constructor(props) {

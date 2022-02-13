@@ -18,7 +18,7 @@ import AppraisalReport from './components/Employee/AppraisalReport';
 import Contact from './components/Contact';
 import SalaryEdit from './components/Admin/SalaryEdit';
 import PreviewReport from './components/Authority/PreviewReport';
-
+import AddEmployees from './components/Admin/AddEmployee';
 
 
 
@@ -52,6 +52,8 @@ function App() {
            <Route path = "/update-details" element = {< UpdateEmployeeDetails/>}></Route>
 
            <Route path = "/salaryedit" element = {< SalaryEdit/>}></Route>
+
+           <Route path = "/addemployee" element = {< AddEmployees/>}></Route>
 
            <Route path = "/contact" element = {< Contact/>}></Route>
 

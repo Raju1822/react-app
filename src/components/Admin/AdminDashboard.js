@@ -3,31 +3,26 @@ import AdminService from "../../services/AdminService";
 import "../../css/AdminDashboard.css";
 import Admin from "../../img/admin.png";
 import StaffService from "../../services/StaffService";
-
 class AdminDashboard extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       admin: [],
       staff: [],
     };
   }
-
   addEmployee() {
-    alert("Employee add feature comming soon........!");
+    // alert("Employee add feature comming soon........!");
+    window.location.href = "/addemployee";
   }
-
   componentDidMount() {
     AdminService.getAdmin().then((res) => {
       this.setState({ admin: res.data });
     });
-
     StaffService.getAllStaff().then((res) => {
       this.setState({ staff: res.data });
     });
   }
-
   render() {
     return (
       <>
@@ -40,6 +35,8 @@ class AdminDashboard extends Component {
               <div className="lead ">
                 {this.state.admin.map((adm) => (
                   <p key={adm.id}>
+                    {" "}
+                    <strong> Admin : </strong>
                     {adm.firstName} {adm.lastName} {adm.length}
                   </p>
                 ))}
@@ -59,7 +56,6 @@ class AdminDashboard extends Component {
               </p>
             </div>
           </section>
-
           {/* Modal for admin logout */}
           <div className="container p-2">
             <div className="modal" id="myModal">
@@ -71,11 +67,9 @@ class AdminDashboard extends Component {
                     </h1>
                     <h4 className="modal-title text-center">Admin</h4>
                   </div>
-
                   <div className="modal-header">
                     <h5 className="text-muted">Do you want to logout?</h5>
                   </div>
-
                   <div className="modal-footer">
                     <a
                       href="/admin"
@@ -93,7 +87,6 @@ class AdminDashboard extends Component {
             </div>
           </div>
           {/* Album Page  */}
-
           <div className="album py-5 bg-light">
             <div className="container">
               <div className="row">
@@ -110,7 +103,6 @@ class AdminDashboard extends Component {
                     </div>
                   </div>
                 </div>
-
                 <div className="col-md-3">
                   <div className="card mb-4 box-shadow text-center">
                     <div className="m-3">
@@ -124,7 +116,6 @@ class AdminDashboard extends Component {
                     </div>
                   </div>
                 </div>
-
                 <div className="col-md-3">
                   <div className="card mb-4 box-shadow text-center">
                     <div className="m-3">
@@ -138,7 +129,6 @@ class AdminDashboard extends Component {
                     </div>
                   </div>
                 </div>
-
                 <div className="col-md-3">
                   <div className="card mb-4 box-shadow text-center">
                     <div className="m-3">
@@ -155,9 +145,7 @@ class AdminDashboard extends Component {
               </div>
             </div>
           </div>
-
           {/* Slider page verticle nav */}
-
           <section className="py-5 header">
             <div className="container py-4">
               <div className="row">
@@ -182,7 +170,6 @@ class AdminDashboard extends Component {
                         Personal information
                       </span>
                     </a>
-
                     <a
                       className="nav-link mb-3 p-3 shadow"
                       id="v-pills-profile-tab"
@@ -197,7 +184,6 @@ class AdminDashboard extends Component {
                         Employess
                       </span>
                     </a>
-
                     <a
                       className="nav-link mb-3 p-3 shadow"
                       id="v-pills-messages-tab"
@@ -212,7 +198,6 @@ class AdminDashboard extends Component {
                         Salary Table
                       </span>
                     </a>
-
                     <a
                       className="nav-link mb-3 p-3 shadow"
                       id="v-pills-settings-tab"
@@ -229,7 +214,6 @@ class AdminDashboard extends Component {
                     </a>
                   </div>
                 </div>
-
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div
@@ -251,35 +235,33 @@ class AdminDashboard extends Component {
                         anim id est laborum.
                       </p>
                     </div>
-
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-profile"
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <h4 className="font-italic mb-4">
-                        Employee Table{" "}
+                      <h4 className="text-center mb-4">
+                        Employee Table
                         <button
                           type="button"
-                          className="btn btn-success mx-5"
+                          className="btn btn-success mx-5 m-2"
                           onClick={this.addEmployee}
                         >
                           Add Employee
                         </button>
                       </h4>
-                      <hr></hr>
-                      <div className="font-italic text-muted mb-2">
-                        <table className="table table-striped table-bordered">
+                      <div className="overflow-auto text-muted mb-2">
+                        <table className="table table-bordered">
                           <thead>
                             <tr>
                               <th> Employee Id</th>
                               <th> Employee First Name</th>
                               <th> Employee Last Name</th>
                               <th> Employee Email</th>
-                              <th></th>
-                              <th>Actions</th>
-                              <th></th>
+                              <th>Update</th>
+                              <th>Delete</th>
+                              <th>View</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -327,45 +309,48 @@ class AdminDashboard extends Component {
                         </table>
                       </div>
                     </div>
-
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-messages"
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <h4 className="font-italic mb-4">Employees Salary</h4>
-
-                      <table className="table table-striped table-bordered">
-                        <thead>
-                          <tr>
-                            <th> Employee Id</th>
-                            <th> Employee First Name</th>
-                            <th>Salary</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>id</td>
-                            <td> Name here</td>
-                            <td>Salary</td>
-                            <td>
-                              <a href="/salaryedit">
-                                {" "}
-                                <button
-                                  style={{ marginLeft: "10px" }}
-                                  className="btn btn-info"
-                                >
-                                  Edit{" "}
-                                </button>
-                              </a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <h4 className="text-center mb-4">Employees Salary</h4>
+                      <div className="overflow-auto text-muted mb-2">
+                        <table className="table text-center table-bordered">
+                          <thead>
+                            <tr>
+                              <th> Employee Id</th>
+                              <th> Employee First Name</th>
+                              <th>Salary</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {this.state.staff.map((employee) => (
+                              <tr key={employee.id}>
+                                <td>{employee.id}</td>
+                                <td>
+                                  {" "}
+                                  {employee.firstName} {employee.lastName}
+                                </td>
+                                <td> {employee.salary}</td>
+                                <td>
+                                  <a href="/salaryedit">
+                                    <button
+                                      style={{ marginLeft: "10px" }}
+                                      className="btn btn-info"
+                                    >
+                                      Edit
+                                    </button>
+                                  </a>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
                       id="v-pills-settings"
@@ -395,5 +380,4 @@ class AdminDashboard extends Component {
     );
   }
 }
-
 export default AdminDashboard;
