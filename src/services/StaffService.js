@@ -14,6 +14,15 @@ class StaffService{
         // alert("hello"+ employee.firstName)
         return axios.post(STAFF_API_BASE_URL, employee);
     }
+
+    getEmployeeById(employeeId){
+        return axios.get(STAFF_API_BASE_URL + '/' + employeeId);
+    }
+
+    deleteEmployeebyId(employeeId){
+
+        return axios.delete(STAFF_API_BASE_URL + '/' + employeeId);
+    }
 }
 
 export default new StaffService()

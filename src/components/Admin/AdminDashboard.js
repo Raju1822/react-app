@@ -15,6 +15,20 @@ class AdminDashboard extends Component {
     // alert("Employee add feature comming soon........!");
     window.location.href = "/addemployee";
   }
+  deleteEmployee(employeeId){
+    // alert("Hell" + employeeId);
+    // return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeId);
+    StaffService.deleteEmployeebyId(employeeId);
+    alert("Employee of id " + employeeId + " is removed");
+    window.location.reload();
+}
+editEmployee(employeeId){
+  window.location.href = `/update-details/${employeeId}`;
+}
+viewEmployee(employeeId){
+  window.location.href = `/view-employee/${employeeId}`;
+}
+
   componentDidMount() {
     AdminService.getAdmin().then((res) => {
       this.setState({ admin: res.data });
